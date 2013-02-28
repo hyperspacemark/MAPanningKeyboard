@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D50AFB716D9BA18003E469B /* UIScreen+KeyboardImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D50AFB616D9BA18003E469B /* UIScreen+KeyboardImage.m */; };
 		4DA6BE5B16D87A0E002D4EF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA6BE5A16D87A0E002D4EF3 /* UIKit.framework */; };
 		4DA6BE5D16D87A0E002D4EF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA6BE5C16D87A0E002D4EF3 /* Foundation.framework */; };
 		4DA6BE5F16D87A0E002D4EF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA6BE5E16D87A0E002D4EF3 /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 		4DA6BE8116D87A0E002D4EF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA6BE5C16D87A0E002D4EF3 /* Foundation.framework */; };
 		4DA6BE8916D87A0E002D4EF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DA6BE8716D87A0E002D4EF3 /* InfoPlist.strings */; };
 		4DA6BE8C16D87A0E002D4EF3 /* MAPanDismissKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA6BE8B16D87A0E002D4EF3 /* MAPanDismissKeyboardTests.m */; };
+		4DA6BE9616D88F45002D4EF3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA6BE9516D88F45002D4EF3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D50AFB516D9BA18003E469B /* UIScreen+KeyboardImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+KeyboardImage.h"; sourceTree = "<group>"; };
+		4D50AFB616D9BA18003E469B /* UIScreen+KeyboardImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+KeyboardImage.m"; sourceTree = "<group>"; };
 		4DA6BE5716D87A0E002D4EF3 /* MAPanDismissKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAPanDismissKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA6BE5A16D87A0E002D4EF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4DA6BE5C16D87A0E002D4EF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,13 +55,14 @@
 		4DA6BE7016D87A0E002D4EF3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4DA6BE7316D87A0E002D4EF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4DA6BE7516D87A0E002D4EF3 /* MAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAViewController.h; sourceTree = "<group>"; };
-		4DA6BE7616D87A0E002D4EF3 /* MAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAViewController.m; sourceTree = "<group>"; };
+		4DA6BE7616D87A0E002D4EF3 /* MAViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = MAViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		4DA6BE7D16D87A0E002D4EF3 /* MAPanDismissKeyboardTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MAPanDismissKeyboardTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA6BE7E16D87A0E002D4EF3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4DA6BE8616D87A0E002D4EF3 /* MAPanDismissKeyboardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MAPanDismissKeyboardTests-Info.plist"; sourceTree = "<group>"; };
 		4DA6BE8816D87A0E002D4EF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4DA6BE8A16D87A0E002D4EF3 /* MAPanDismissKeyboardTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAPanDismissKeyboardTests.h; sourceTree = "<group>"; };
 		4DA6BE8B16D87A0E002D4EF3 /* MAPanDismissKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAPanDismissKeyboardTests.m; sourceTree = "<group>"; };
+		4DA6BE9516D88F45002D4EF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA6BE9616D88F45002D4EF3 /* QuartzCore.framework in Frameworks */,
 				4DA6BE5B16D87A0E002D4EF3 /* UIKit.framework in Frameworks */,
 				4DA6BE5D16D87A0E002D4EF3 /* Foundation.framework in Frameworks */,
 				4DA6BE5F16D87A0E002D4EF3 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +112,7 @@
 		4DA6BE5916D87A0E002D4EF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DA6BE9516D88F45002D4EF3 /* QuartzCore.framework */,
 				4DA6BE5A16D87A0E002D4EF3 /* UIKit.framework */,
 				4DA6BE5C16D87A0E002D4EF3 /* Foundation.framework */,
 				4DA6BE5E16D87A0E002D4EF3 /* CoreGraphics.framework */,
@@ -123,6 +130,8 @@
 				4DA6BE7516D87A0E002D4EF3 /* MAViewController.h */,
 				4DA6BE7616D87A0E002D4EF3 /* MAViewController.m */,
 				4DA6BE6116D87A0E002D4EF3 /* Supporting Files */,
+				4D50AFB516D9BA18003E469B /* UIScreen+KeyboardImage.h */,
+				4D50AFB616D9BA18003E469B /* UIScreen+KeyboardImage.m */,
 			);
 			path = MAPanDismissKeyboard;
 			sourceTree = "<group>";
@@ -274,6 +283,7 @@
 				4DA6BE6716D87A0E002D4EF3 /* main.m in Sources */,
 				4DA6BE6B16D87A0E002D4EF3 /* MAAppDelegate.m in Sources */,
 				4DA6BE7716D87A0E002D4EF3 /* MAViewController.m in Sources */,
+				4D50AFB716D9BA18003E469B /* UIScreen+KeyboardImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +464,7 @@
 				4DA6BE9116D87A0E002D4EF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DA6BE9216D87A0E002D4EF3 /* Build configuration list for PBXNativeTarget "MAPanDismissKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +473,7 @@
 				4DA6BE9416D87A0E002D4EF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
