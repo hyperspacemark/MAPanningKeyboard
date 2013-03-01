@@ -14,7 +14,7 @@
 {
   UIWindow *keyboard = nil;
 
-  for (UIWindow *window in [[UIApplication sharedApplication] windows])
+  for (UIWindow *window in self.windows)
   {
     if ([[window description] hasPrefix:@"<UITextEffectsWin"])
     {
