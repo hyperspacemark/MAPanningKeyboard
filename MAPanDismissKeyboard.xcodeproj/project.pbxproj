@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D50AFB716D9BA18003E469B /* UIScreen+KeyboardImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D50AFB616D9BA18003E469B /* UIScreen+KeyboardImage.m */; };
+		4D5AFA6116E16C2400E9CDAA /* UIApplication+KeyboardWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5AFA6016E16C2400E9CDAA /* UIApplication+KeyboardWindow.m */; };
 		4DA6BE5B16D87A0E002D4EF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA6BE5A16D87A0E002D4EF3 /* UIKit.framework */; };
 		4DA6BE5D16D87A0E002D4EF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA6BE5C16D87A0E002D4EF3 /* Foundation.framework */; };
 		4DA6BE5F16D87A0E002D4EF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA6BE5E16D87A0E002D4EF3 /* CoreGraphics.framework */; };
@@ -38,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D50AFB516D9BA18003E469B /* UIScreen+KeyboardImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+KeyboardImage.h"; sourceTree = "<group>"; };
-		4D50AFB616D9BA18003E469B /* UIScreen+KeyboardImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+KeyboardImage.m"; sourceTree = "<group>"; };
+		4D5AFA5F16E16C2400E9CDAA /* UIApplication+KeyboardWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+KeyboardWindow.h"; sourceTree = "<group>"; };
+		4D5AFA6016E16C2400E9CDAA /* UIApplication+KeyboardWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+KeyboardWindow.m"; sourceTree = "<group>"; };
 		4DA6BE5716D87A0E002D4EF3 /* MAPanDismissKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAPanDismissKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA6BE5A16D87A0E002D4EF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4DA6BE5C16D87A0E002D4EF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,8 +130,8 @@
 				4DA6BE7516D87A0E002D4EF3 /* MAViewController.h */,
 				4DA6BE7616D87A0E002D4EF3 /* MAViewController.m */,
 				4DA6BE6116D87A0E002D4EF3 /* Supporting Files */,
-				4D50AFB516D9BA18003E469B /* UIScreen+KeyboardImage.h */,
-				4D50AFB616D9BA18003E469B /* UIScreen+KeyboardImage.m */,
+				4D5AFA5F16E16C2400E9CDAA /* UIApplication+KeyboardWindow.h */,
+				4D5AFA6016E16C2400E9CDAA /* UIApplication+KeyboardWindow.m */,
 			);
 			path = MAPanDismissKeyboard;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 				4DA6BE6716D87A0E002D4EF3 /* main.m in Sources */,
 				4DA6BE6B16D87A0E002D4EF3 /* MAAppDelegate.m in Sources */,
 				4DA6BE7716D87A0E002D4EF3 /* MAViewController.m in Sources */,
-				4D50AFB716D9BA18003E469B /* UIScreen+KeyboardImage.m in Sources */,
+				4D5AFA6116E16C2400E9CDAA /* UIApplication+KeyboardWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

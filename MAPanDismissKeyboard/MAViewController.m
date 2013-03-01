@@ -7,7 +7,7 @@
 //
 
 #import "MAViewController.h"
-#import "UIScreen+KeyboardImage.h"
+#import "UIApplication+KeyboardWindow.h"
 
 @interface MAViewController ()
 
@@ -67,9 +67,37 @@
 
 #pragma mark - Keyboard Image
 
+- (UIImage *)createKeyboardImage
+{
+    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    CGContextSaveGState(context);
+
+    UIWindow *keyboardWindow = [[UIApplication sharedApplication] keyboardWindow];
+    CGContextTranslateCTM(context, keyboardWindow.center.x, keyboardWindow.center.y);
+    CGContextConcatCTM(context, keyboardWindow.transform);
+
+    NSInteger yOffset = [UIApplication sharedApplication].statusBarHidden? 0 : -20;
+    CGFloat xTranslation = -1.0f * CGRectGetWidth(keyboardWindow.bounds) * keyboardWindow.layer.anchorPoint.x;
+    CGFloat yTranslation = -1.0f * CGRectGetHeight(keyboardWindow.bounds) * keyboardWindow.layer.anchorPoint.y;
+    CGContextTranslateCTM(context, xTranslation, yTranslation + yOffset);
+
+    [keyboardWindow.layer renderInContext:context];
+
+    CGContextRestoreGState(context);
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 - (void)prepareKeyboardImage
 {
-    self.keyboardImageView.image = [[UIScreen mainScreen] keyboardImage];
+    self.keyboardImageView.image = [self createKeyboardImage];
     self.keyboardImageView.frame = self.keyboardFrame;
 }
 
