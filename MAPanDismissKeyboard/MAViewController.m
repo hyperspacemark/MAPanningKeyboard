@@ -11,7 +11,10 @@
 
 @interface MAViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+
 @property (assign, nonatomic) CGRect keyboardFrame;
 @property (strong, nonatomic) UIImageView *keyboardImageView;
 @property (assign, nonatomic) CGPoint panStartPoint;
@@ -184,6 +187,16 @@
         return yOrigin;
 }
 
+#pragma mark - Managing the scroll view
+
+- (void)resizeScrollViewInResponseToKeyboardNotification:(NSNotification *)notification
+{
+  CGRect endFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+  endFrame = [self.view.window convertRect:endFrame toView:nil];
+
+  
+}
+
 #pragma mark - Managing the keyboard
 
 - (void)showKeyboardWithoutAnimation
@@ -216,6 +229,8 @@
 
 - (void)keyboardVisibilityDidChange:(NSNotification *)notification
 {
+    [self resizeScrollViewInResponseToKeyboardNotification:notification];
+  
     if ([[notification name] isEqualToString:UIKeyboardDidShowNotification])
     {
         CGRect endFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
