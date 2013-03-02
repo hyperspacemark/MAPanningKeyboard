@@ -9,7 +9,7 @@
 #import "MAViewController.h"
 #import "UIApplication+KeyboardWindow.h"
 
-@interface MAViewController ()
+@interface MAViewController () <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -40,7 +40,12 @@
 
 - (UIPanGestureRecognizer *)panGestureRecognizer
 {
-    if (!_panGestureRecognizer) _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    if (!_panGestureRecognizer)
+    {
+        _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+        _panGestureRecognizer.delegate = self;
+    }
+    
     return _panGestureRecognizer;
 }
 
@@ -56,6 +61,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.scrollView.layer.borderColor = [UIColor blueColor].CGColor;
+    self.scrollView.layer.borderWidth = 1.0f;
     [self.view addSubview:self.keyboardImageView];
     [self.view addGestureRecognizer:self.panGestureRecognizer];
     [self startObservingKeyboardNotifications];
@@ -187,14 +194,23 @@
         return yOrigin;
 }
 
+#pragma mark UIGestureRecognizerDelegate
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
 #pragma mark - Managing the scroll view
 
 - (void)resizeScrollViewInResponseToKeyboardNotification:(NSNotification *)notification
 {
-  CGRect endFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-  endFrame = [self.view.window convertRect:endFrame toView:nil];
+    CGRect endFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    endFrame = [self.view convertRect:endFrame fromView:self.view.window];
 
-  
+    CGRect scrollViewFrame = self.scrollView.frame;
+    scrollViewFrame.size.height = CGRectGetMinY(endFrame);
+    self.scrollView.frame = scrollViewFrame;
 }
 
 #pragma mark - Managing the keyboard
